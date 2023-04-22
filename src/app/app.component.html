@@ -14,10 +14,34 @@
           <div class="image2"
           [ngStyle]="{'width.px': '9000'}"></div>
       </div>
-      <!-- <div class="cover-image-right"
-      [ngStyle]="{'height.px': xHeightValue, 'width.px': yWidthValue}">
-        <div class="image2"></div>
-      </div> -->
+
+
+      <div class="main-content"
+      [ngStyle]="{'height.px': bottomDivHeight, 'width.px': bottomDivWidth}">
+
+      <!-- Main Content Here -->
+
+      <div class="inner-content"
+      [ngStyle]="{'height.px': mainContentDivHeight, 'width.px': mainContentDivWidth}">
+        <div class="title-text">
+          Dipesh Sinha
+          <div class="title-description">
+            Designer and Developer
+          </div>
+        </div>
+
+        <div class="li-wrap">
+          <div class="li-box">About</div>
+          <div class="li-box">Projects</div>
+          <div class="li-box">Info</div>
+          <div class="li-box">Contact</div>
+        </div>
+        
+      </div>
+
+
+    </div>
+
     </div>
 
 
