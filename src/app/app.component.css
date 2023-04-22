@@ -1,0 +1,63 @@
+.body-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-box {
+    background-image: url("../assets/images/patternBottom.png");
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    height: 85%;
+    width: 85%;
+    border: white 1px solid;
+}
+.xaxis {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    /* top: var(--xaxis); */
+}
+.yaxis {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+}
+.cover-image {
+    position: absolute;
+    z-index: 0;
+}
+.cover-image .image1 {
+    position: absolute;
+    background-color: white;
+    background: url("../assets/images/patternInversed.png") no-repeat;
+    /* background-size: cover; */
+    background-size: inherit;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 5;
+}
+.cover-image .image2 {
+    position: absolute;
+    background-color: white;
+    background: url("../assets/images/pattern.png") no-repeat;
+    /* background-size: cover; */
+    background-size: inherit;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
