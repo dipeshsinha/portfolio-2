@@ -1,6 +1,6 @@
 
 .body-wrap {
-    
+    cursor: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -109,4 +109,29 @@
     text-align: right;
     color: white;
     padding-right: 20px;
+  }
+
+  .cursor {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #c6c6c6;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.1s;
+  }
+  .cursor2 {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #c6c6c6;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.15s;
   }

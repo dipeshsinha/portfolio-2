@@ -6,7 +6,7 @@
     <title>Dipesh Sinha - Full Stack Developer</title>
 </head>
 <body>
-  <div class="body-wrap" (mousemove)="onMouseMoved($event)">
+  <div class="body-wrap">
     <div class="content-box">
       <div class="cover-image" 
         [ngStyle]="{'height.px': xHeightValue, 'width.px': yWidthValue}">
@@ -48,6 +48,7 @@
 
 
 
+    <div class="cursor" [ngStyle]="{'left.px': cursorPositionX, 'top.px': cursorPositionY}"></div>
     <div class="xaxis" [ngStyle]="{'top.px': xAxisValue}"></div>
     <div class="yaxis" [ngStyle]="{'left.px': yAxisValue}"></div>
   </div>
