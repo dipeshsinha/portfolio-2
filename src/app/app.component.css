@@ -84,6 +84,7 @@
 }
 .title-text {
     position: absolute;
+    width: 100%;
     top: 40px;
     left: 40px;
     font-size: xx-large;
@@ -96,42 +97,44 @@
 .li-wrap {
     position: absolute;
     bottom: 40px;
-    height: 70%;
-    width: 100%;
-
+    height: 40%;
+    right: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 300px;
+    
 }
+
 .li-box {
+
     flex: 1;
-    text-align: right;
+    text-align: center;
     color: white;
-    padding-right: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .li-box:hover {
+    color: #c5003a;
   }
 
-  .cursor {
+.cursor {
     position: fixed;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #c6c6c6;
+    width: 30px;
+    height: 30px;
+    z-index: 20;
+    background-color: #c6c6c6;
     border-radius: 50%;
     left: 0;
     top: 0;
     pointer-events: none;
     transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: transparent;
+    opacity: 1;
     transition: 0.1s;
-  }
-  .cursor2 {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    border: 1px solid #c6c6c6;
-    border-radius: 50%;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: 0.15s;
   }

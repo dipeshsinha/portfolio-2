@@ -1,14 +1,30 @@
-import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger('mouseLinkHover',[
+      state('on',style({
+        height: '50px',
+        width: '50px',
+        border: '#c6c6c6 solid .5px',
+        opacity: '.3', 
+      })),
+      state('off',style({
+        height: '30px',
+        width: '30px',
+        border: 'transparent',
+        opacity: '1',
+      })),
+      transition('on => off',animate('1000ms ease-out')),
+      transition('off => on',animate('1000ms ease-in'))
+    ])
+  ]
 })
 export class AppComponent{
-
-  constructor(private renderer: Renderer2) {}
-
 
   cursorPositionX = 0
   cursorPositionY = 0
@@ -23,6 +39,16 @@ export class AppComponent{
   mainContentDivWidth = 0
   gridRangeWidth = 0.35
   gridRangeHeight = 0.3
+
+  cursorOnLink = false
+
+  cursorState() {
+    return this.cursorOnLink ? 'on' : 'Off'
+  }
+
+  onMouseHover() {
+
+  }
 
 
   @HostListener('mousemove', ['$event'])
@@ -45,7 +71,6 @@ export class AppComponent{
     }
 
     
-    // this.yAxisValue = event.clientX
     this.xHeightValue = this.xAxisValue - (window.innerHeight * 0.075)
     this.yWidthValue = this.yAxisValue - (window.innerWidth * 0.075)
     this.bottomDivHeight = window.innerHeight - this.xHeightValue - (window.innerHeight * 0.15)
@@ -53,10 +78,6 @@ export class AppComponent{
 
     this.mainContentDivHeight = (window.innerHeight*(1 - this.gridRangeHeight)) - (window.innerHeight * 0.075)
     this.mainContentDivWidth = (window.innerWidth*(1 - this.gridRangeWidth)) - (window.innerWidth * 0.075);
-
-
-    // this.cursor.nativeElement.style.cssText = this.cursor2.nativeElement.style.cssText = "left: " + event.clientX + "px; top: " + event.clientY + "px;"
-
 
 
   }

@@ -31,16 +31,18 @@
         </div>
 
         <div class="li-wrap">
-          <div class="li-box">About</div>
-          <div class="li-box">Projects</div>
-          <div class="li-box">Info</div>
-          <div class="li-box">Contact</div>
+          <div class="li-box" id="li-box" (mouseenter)="cursorOnLink = !cursorOnLink" (mouseleave)="cursorOnLink = !cursorOnLink">About</div>
+          <div class="li-box" id="li-box" (mouseenter)="cursorOnLink = !cursorOnLink" (mouseleave)="cursorOnLink = !cursorOnLink">Projects</div>
+          <div class="li-box" id="li-box" (mouseenter)="cursorOnLink = !cursorOnLink" (mouseleave)="cursorOnLink = !cursorOnLink">Info</div>
+          <div class="li-box" id="li-box" (mouseenter)="cursorOnLink = !cursorOnLink" (mouseleave)="cursorOnLink = !cursorOnLink">Contact</div>
+          <div class="cursor" id="cursor" [ngStyle]="{'left.px': cursorPositionX, 'top.px': cursorPositionY}" [@mouseLinkHover]="cursorState()"></div>
         </div>
         
       </div>
 
 
     </div>
+    
 
     </div>
 
@@ -48,7 +50,6 @@
 
 
 
-    <div class="cursor" [ngStyle]="{'left.px': cursorPositionX, 'top.px': cursorPositionY}"></div>
     <div class="xaxis" [ngStyle]="{'top.px': xAxisValue}"></div>
     <div class="yaxis" [ngStyle]="{'left.px': yAxisValue}"></div>
   </div>
